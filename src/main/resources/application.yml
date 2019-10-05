@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/oauth2demo
+    username: develop
+    password: 123456
+    initialization-mode: always
+  jpa:
+    hibernate:
+      #      ddl-auto: update
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    #    database-platform: org.hibernate.dialect.H2Dialect
+
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
